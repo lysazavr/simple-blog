@@ -2,108 +2,89 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Simple-blog</title>
- <link rel="stylesheet" href="css/normalize.css">
- <link rel="stylesheet" href="css/main.css">
- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> </head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple-blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
 
 <body id="doc" class="page">
-<!--
- <div class="page__header">
-  <div class="header-container wrapper"> <span class="shop-logo" alt="logo-shop">
-            <%- include('svg/the_shop_logo'); %> </span> <span class="oggetto-logo" alt="oggetto-logo">
-            <%- include('svg/company-logo'); %> </span> <span class="contact-phone">+7 (812)-2-12-85-06</span> </div>
- </div>
- <div class="menu-container__categories">
-  <div class="categories-menu">
-   <% const menu = [{title: 'LISP', active: true},
-                    {title: 'OCaml', active: false},
-                    {title: 'Java Script', active: false},
-                    {title: 'Python', active: false},
-                    {title: 'PHP', active: false}] %>
-    <ul class="categories-menu__list">
-     <% menu.forEach(function(item) { %>
-      <li class="categories-menu__items">
-       <a href="#" class="categories-menu__item <% if(item.active) { %> categories-menu__item_active <% } %>">
-        <%= item.title %>
-       </a>
-      </li>
-      <% }); %>
-    </ul>
-  </div>
- </div>
- <ul class="hidden-menu">
-  <% const mobile_Menu = [{title: 'LISP', active: true},
-                {title: 'OCaml', active: false},
-                {title: 'Java Script', active: false},
-                {title: 'Python', active: false},
-                {title: 'PHP', active: false}] %>
-   <% mobile_Menu.forEach(function (item) { %>
-    <li>
-     <a href="#" class="hidden-menu__item <% if(item.active) { %> hidden-menu__item_active <% } %>">
-      <%= item.title %>
-     </a>
-    </li>
-    <% }); %>
- </ul>
- <div class="breadcrumbs">
-  <% const breadcrumbs = ['LISP', 'Одежда', 'Футболки'] %>
-   <ul class="breadcrumbs__list">
-    <% breadcrumbs.forEach(function(item, index) { %>
-     <li class="breadcrumbs__items">
-      <% if(index < (breadcrumbs.length - 1)) { %>
-       <a href="#" class="breadcrumbs__item">
-        <%= item %>
-       </a>/
-       <% } else { %> <span class="breadcrumbs__item breadcrumbs__item_active"> <%= item %> </span>
-        <% } %>
-     </li>
-     <% }); %>
-   </ul>
- </div>
- <input type="hidden" class="product-option-input" name="size" value="M">
- <ul id="sizeList" class="option-content">
-  <% const sizes = [
-                                    {value: 'S', active: false},
-                                    {value: 'M', active: true},
-                                    {value: 'L', active: false},
-                                ] %>
-   <% sizes.forEach(function(size) { %>
-    <li class="option-content__item  <% if (size.active) { %> option-content__item_active <% } %>  " data-type="size" data-value="<%= size.value %>">
-     <%= size.value %>
-    </li>
-    <% }); %>
- </ul>
- <input type="hidden" class="product-option-input" name="color" value="white">
- <ul id="colorList" class="option-content">
-  <% const colors = [
-                                    {
-                                        value: 'white',
-                                        active: true,
-                                        colorCode: '#fffafb',
-                                        src: 'img/tshirts/tshirt_white.jpg'
-                                    },
-                                    {
-                                        value: 'yellow',
-                                        active: false,
-                                        colorCode: '#e3d95e',
-                                        src: 'img/tshirts/tshirt_yellow.jpg'
-                                    },
-                                    {
-                                        value: 'green',
-                                        active: false,
-                                        colorCode: '#a5af96',
-                                        src: 'img/tshirts/tshirt_green.jpg'
-                                    },
-                                ] %>
-   <% colors.forEach(function(color) { %>
-    <li class="option-content__item <% if (color.active) { %>option-content__item_active<% } %>" style="background-color: <%= color.colorCode %>;" data-type="color" data-value="<%= color.value %>" data-src="<%= color.src %>"> </li>
-    <% }); %>
- </ul>-->
- <script type="module" src="js/scripts.js"></script>
+<div class="page__header">
+    <img class="page__header page__header_img" src="img/home-header.png">
+    <img class="user-photo" src="img/circle-foto-header.png">
+</div>
+
+
+<div class="page__nav">
+    <nav class="navigation">
+        <ul class="navigation navigation__group navigation__group_first ">
+            <li class="navigation__group navigation__group_list"><a href="#" class="link active">Home</a></li>
+            <li class="navigation__group navigation__group_list"><a href="#" class="link">About</a></li>
+        </ul>
+        <ul class="navigation navigation__group   navigation__group_last ">
+            <li class="category navigation__group navigation__group_list"><a href="#" class="link">Categories</a>
+                <ul class="popup">
+                    <li class="popup__group"><a class="popup__link" href="#">Diary</a></li>
+                    <li class="popup__group"><a class="popup__link" href="#">Personal</a></li>
+                    <li class="popup__group"><a class="popup__link" href="#">Holyday</a></li>
+                    <li class="popup__group"><a class="popup__link" href="#">Work</a></li>
+                    <li class="popup__group"><a class="popup__link" href="#">Family</a></li>
+                </ul>
+
+            </li>
+            <li class="navigation__group navigation__group_list"><a href="#" class="link ">Contact</a></li>
+        </ul>
+
+    </nav>
+</div>
+
+
+<div class="page__content">
+    <div class="intro">
+        <p class="intro__greeting">Hello, Welcome to my Blog! </p>
+        <img class="intro__icon" src="img/icons/shape.png">
+    </div>
+
+    <div class="post">
+        <div class="post__date">
+            31 Jul
+        </div>
+        <div class="post__description">
+            <div class=" post__description post__description_header">
+                <div class="cat">cat :<a class="cat__link" href="#"> Diary , </a> <a class="cat__link" href="#">
+                        Personal</a></div>
+                <div class="likes"><i class="fa fa-heart" aria-hidden="true"></i><a class="likes__link" href="#">136
+                        Likes </a></div>
+                <div class="comments"><a class="comments__link message" href="#">21 Comments</a>
+                </div>
+            </div>
+            <div class="post__description post__description_content">
+                <h1 class="title">Lorem Ipsum Dolor Sit Amet</h1>
+                <p class="post-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh ut perspiciatis unde
+                    omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                    ipsa quae ab illo inventore veritatis et quasi beatae vitae dicta sunt explicabo. Nemo
+                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="page__footer">
+
+
+</div>
+
+
+<script type="module" src="js/scripts.js"></script>
 </body>
 
 </html>

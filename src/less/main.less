@@ -1,33 +1,237 @@
 @import 'media';
 
-/*
-@menu-color: #f2f2ed;
-@font-color: #c00;
+@main-color: #3eb3a5;
+
 .page {
- width: 100%;
- margin: 0;
- background-color: #fff;
- font-family: Roboto, sans-serif;
- font-size: 14px;
- &__header {
-  width: 100%;
-  color: @font-color;
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
-  @media @phone {
-   width: 100%;
-  }
- }
- &__breadcrumbs {
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  @media @phone {
-   margin: 0 auto;
+  background: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  &__header {
+    width: 100%;
+    &-img {
+      display: block;
+      position: absolute;
+    }
+    @media @phone {
+      width: 100%;
+    }
+    .user-photo {
+      display: block;
+      position: relative;
+      margin: -98px auto;
+    }
   }
-  @media @tablet-strict {
-   margin: 0 auto;
+  &__nav {
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
   }
-  @media @desktop {
-   width: 100%;
+}
+
+.navigation {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  &__group {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    width: 40%;
+    list-style-type: none;
+    font-size: 23px;
+    padding: 7px 0 30px 0;
+    border: none;
+    &_first {
+      margin-right: 35%;
+      text-align: right;
+    }
+
+    &_list {
+      justify-content: space-between;
+      padding: 0;
+    }
   }
- }*/
+}
+
+.category {
+  position: relative;
+  &:hover .popup {
+    transform: scaleY(1);
+  }
+}
+
+.popup {
+  position: absolute;
+  padding: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  width: 230px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
+  &__group {
+    list-style-type: none;
+    margin: 0 auto;
+    margin: 30px 15px 30px 15px;
+    padding-bottom: 20px;
+    width: 90%;
+    border-bottom: 1px solid #afafaf;
+    text-align: left;
+    &:hover .popup__link {
+      color: #3eb3a5;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 22px;
+    color: #bcbcbc;
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #bcbcbc;
+}
+
+.active {
+  color: @main-color;
+  border-bottom: 5px solid #afafaf;
+  padding-bottom: 11px;
+}
+
+.page__content {
+  width: 100%;
+}
+
+.intro {
+  &__greeting {
+    color: #a0a0a0;
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 105px;
+    text-align: center;
+  }
+  &__icon {
+    display: block;
+    margin: 8px auto;
+
+  }
+}
+
+.post {
+  display: block;
+  width: 78%;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 35px;
+  color: #cacaca;
+
+  &__date {
+    width: 13%;
+    display: inline-block;
+    border: 7px solid #ebebeb;
+    text-align: center;
+    color: #3eb3a5;
+    padding: 43px 4px;
+    font-size: 30px;
+    border-radius: 50%;
+  }
+  &__description {
+    width: 84%;
+    display: inline-block;
+    font-size: 14px;
+    &_header {
+      width: 100%;
+      border-bottom: 1px solid #ebebeb;
+      padding-bottom: 10px;
+    }
+    &_content {
+      padding-left: 12px;
+    }
+  }
+}
+
+.cat {
+  display: inline-block;
+  padding-left: 12px;
+  margin-right: 10px;
+  &__link {
+    text-decoration: none;
+    color: #c8c8c8;
+    &:hover {
+      color: #3eb3a5;
+    }
+  }
+}
+
+.likes {
+  display: inline-block;
+  padding: 7px 10px 4px 10px;
+  border-left: 2px solid #ebebeb;
+  border-right: 2px solid #ebebeb;
+  &__link {
+    text-decoration: none;
+    color: #c8c8c8;
+  }
+  &:hover a {
+    color: #3eb3a5;
+  }
+}
+
+.comments {
+  display: inline-block;
+  margin-left: 10px;
+  &__link {
+    text-decoration: none;
+    color: #c8c8c8;
+  }
+  &:hover a {
+    color: #3eb3a5;
+  }
+}
+
+.fa {
+  color: #3eb3a5;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.message:before {
+  display: inline-block;
+  content: '';
+  height: 13px;
+  width: 15px;
+  background: url("../img/icons/massage.png");
+  background-repeat: no-repeat;
+  margin-right: 11px;
+}
+
+.title {
+  font-weight: bold;
+  color: #000;
+
+}
+
+.post-text {
+  font-size: 16px;
+  margin: 20px 0 0 0;
+  line-height: 1.5em ;
+  color: #969696;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
