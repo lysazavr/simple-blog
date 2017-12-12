@@ -31,6 +31,14 @@
         width: 100%;
         border-bottom: 1px solid #dfdfdf;
     }
+
+    &__footer {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        color: #aeaeae;
+        font-size: 18px;
+    }
 }
 
 .navigation {
@@ -81,10 +89,10 @@
 
     &__group {
         list-style-type: none;
-        margin: 30px 15px;
-        padding-bottom: 20px;
+        margin: 20px 15px;
+        padding-bottom: 5px;
         width: 90%;
-        border-bottom: 1px solid #afafaf;
+        border-bottom: 1px solid #e7e7e7;
         text-align: left;
 
         &:hover .popup__link {
@@ -140,11 +148,13 @@
     color: #cacaca;
     border-bottom: 1px dashed #d7d7d7;
     padding-bottom: 40px;
+    margin-bottom: 60px;
 
     &__date {
         width: 13%;
         /*display: inline-block;*/
         float: left;
+        margin-top: -30px;
         border: 7px solid #ebebeb;
         text-align: center;
         color: @main-color;
@@ -250,6 +260,31 @@
     text-decoration: none;
     border-bottom: 2px solid #e1e1e1;
     padding-bottom: 6px;
+}
 
+.button{
+    padding-bottom: 107px;
+    &__link{
+        border:1px solid @main-color;
+        border-radius: 5px;
+        background-color: @main-color;
+        padding: 20px 20px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+}
+
+.copyright {
+    padding-bottom: 43px;
+    &__link {
+        text-decoration: none;
+        color: @main-color;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
