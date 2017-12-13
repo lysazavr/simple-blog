@@ -24,6 +24,16 @@
             display: block;
             position: relative;
             margin: -98px auto;
+
+            @media @phone {
+                display: none;
+            }
+            @media @tablet{
+                display: block;
+            }
+            @media @desctop{
+                display: block;
+            }
         }
     }
 
@@ -42,7 +52,7 @@
 }
 
 .navigation {
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     display: flex;
 
@@ -50,14 +60,14 @@
         flex-direction: row;
         justify-content: space-between;
         margin: 0;
-        width: 40%;
+        width: 45%;
         list-style-type: none;
         font-size: 23px;
         padding: 7px 0 30px;
         border: none;
 
         &_first {
-            margin-right: 35%;
+            margin-right: 30%;
             text-align: right;
         }
 
@@ -151,7 +161,7 @@
     margin-bottom: 60px;
 
     &__date {
-        width: 13%;
+        width: 125px;
         /*display: inline-block;*/
         float: left;
         margin-top: -30px;
@@ -225,7 +235,7 @@
     }
 }
 
-.fa {
+.fa-heart {
     color: @main-color;
     margin-right: 5px;
     font-size: 16px;
@@ -239,6 +249,17 @@
     background: url('../img/icons/massage.png');
     background-repeat: no-repeat;
     margin-right: 11px;
+}
+
+.sort::after {
+    display: inline-block;
+    content: '';
+    height: 13px;
+    width: 16px;
+    margin: 3px 3px;
+    background-color: #e1e1e1;
+    background: url('../img/icons/down-arrow.png');
+    background-repeat: no-repeat;
 }
 
 .title {
@@ -262,13 +283,14 @@
     padding-bottom: 6px;
 }
 
-.button{
+.button {
     padding-bottom: 107px;
-    &__link{
-        border:1px solid @main-color;
+
+    &__link {
+        border: 1px solid @main-color;
         border-radius: 5px;
         background-color: @main-color;
-        padding: 20px 20px;
+        padding: 20px;
         text-decoration: none;
         color: #fff;
         font-size: 18px;
@@ -278,8 +300,32 @@
     }
 }
 
+/* Pagination links */
+.pagination {
+    width: 100%;
+    padding-bottom: 70px;
+    &__link {
+        color: #afafaf;
+        margin: 0 auto;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color .3s;
+        &_active {
+            background-color: @main-color;
+            color: white;
+        }
+    }
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
 .copyright {
     padding-bottom: 43px;
+
     &__link {
         text-decoration: none;
         color: @main-color;
