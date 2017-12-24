@@ -166,6 +166,7 @@
 .page__content {
     display: block;
     width: 100%;
+
     &_post-content {
         padding-top: 60px;
     }
@@ -589,6 +590,7 @@
     color: #000;
     padding: 40px 0 28px;
     margin: 0;
+
     &__list {
         list-style-type: none;
         display: inline;
@@ -617,6 +619,7 @@
     &__wrapper {
         padding: 31px 0 23px;
         border: none;
+
         &_link {
             float: right;
             font-size: 16px;
@@ -635,7 +638,6 @@
             font-weight: bold;
         }
     }
-
 }
 
 .page-post {
@@ -647,6 +649,7 @@
     width: 100%;
     padding-top: 42px;
     border-bottom: 2px solid #e6e6e6;
+
     &__wrapper {
         margin: 0 auto;
         width: 81%;
@@ -672,7 +675,13 @@
 
         &_text {
             margin-top: 57px;
-            width: 100%;
+            margin-right: 25px;
+            text-align: right;
+        }
+
+        &_name {
+            text-align: right;
+            margin-right: 25px;
         }
     }
 
@@ -682,21 +691,24 @@
         width: 50%;
 
         &_input {
-            flex-direction: row;
-            width: 44%;
+            width: 39%;
             color: #8f9191;
             background-color: #ebebeb;
             border-radius: 5px;
             font-size: 16px;
             border: none;
-            padding: 18px 0 18px 18px;
+            padding: 18px 18px;
             outline: none;
             margin-bottom: 20px;
+
+            &:first-child{
+                margin-right: 5px;
+            }
 
         }
 
         &_comment-input {
-            width: 95%;
+            width: 90%;
             display: block;
             color: #8f9191;
             background-color: #ebebeb;
@@ -704,8 +716,8 @@
             font-size: 16px;
             border: none;
             outline: none;
-            margin-bottom: 17px;
-            padding: 18px 0 18px 18px;
+            margin: 0 0 17px 0;
+            padding: 18px 18px;
         }
 
         &_button-post {
@@ -714,7 +726,7 @@
             text-decoration: none;
             text-align: center;
             color: #fff;
-            padding: 19px 0 19px 0;
+            padding: 19px 0;
             width: 100%;
             background-color: @main-color;
             border-radius: 7px;
@@ -727,6 +739,10 @@
         justify-content: space-between;
         flex-direction: column;
         width: 25%;
+        &_email {
+            margin-left: 25px;
+            font-size: 15px;
+        }
     }
 }
 
@@ -741,7 +757,7 @@
         margin-right: 13px;
 
         &_photo {
-            padding: 58px 0 58px 0;
+            padding: 58px 0;
             width: 116px;
             background-color: #ebebeb;
             border-radius: 50%;
@@ -768,7 +784,7 @@
     color: @main-color;
     font-size: 24px;
     font-weight: bold;
-    margin: 46px 0 24px 0;
+    margin: 46px 0 24px;
 }
 
 .comment-text {
@@ -791,3 +807,4 @@
     color: @main-color;
     margin-top: 15px;
 }
+
